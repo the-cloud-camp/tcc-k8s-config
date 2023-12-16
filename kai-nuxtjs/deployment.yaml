@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kai-nuxtjs
+  name: kai-nuxtjs-deployment
   namespace: prod
 spec:
   revisionHistoryLimit: 2

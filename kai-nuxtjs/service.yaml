@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kai-nuxtjs
+  name: kai-nuxtjs-service
   namespace: prod
 spec:
   selector:
