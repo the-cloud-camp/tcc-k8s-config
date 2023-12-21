@@ -19,7 +19,7 @@ spec:
         app: bojpawnapi
     spec:
       containers:
-        - image: pingkunga/bojpawnapi:dev-242776e
+        - image: pingkunga/bojpawnapi:dev-3ab2e98
           imagePullPolicy: Always
           name: bojpawnapi
           ports:
@@ -67,17 +67,17 @@ spec:
             - name: "ConnectionStrings__BojPawnDbConnection" #APP ใช้
               valueFrom:
                 secretKeyRef:
-                  name: bojpawnapisecretdev #ชื่อ Config
+                  name: bojpawnapisecretprd #ชื่อ Config
                   key: ConnectionStrings_BojPawnDbConnection #ชื่อ key
             - name: JWTKey__Secret #APP ใช้
               valueFrom:
                 secretKeyRef:
-                  name: bojpawnapisecretdev #ชื่อ Config
+                  name: bojpawnapisecretprd #ชื่อ Config
                   key: JWTKey_Secret #ชื่อ key
             - name: ObservabilityOptions__CollectorUrl #APP ใช้
               valueFrom:
                 secretKeyRef:
-                  name: bojpawnapisecretdev #ชื่อ Config
+                  name: bojpawnapisecretprd #ชื่อ Config
                   key: ObservabilityOptions_CollectorUrl #ชื่อ key
       volumes:
         - name: appsettings-volume
