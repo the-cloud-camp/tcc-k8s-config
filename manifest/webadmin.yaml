@@ -7,7 +7,7 @@ spec:
   project: default
   source: 
     repoURL: git@github.com:the-cloud-camp/tcc-group-5.git
-    targetRevision: develop
+    targetRevision: prod
     path: manifest/prod/webadmin
     #directory:
     #  recurse: true
