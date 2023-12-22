@@ -19,7 +19,7 @@ spec:
         app: bojpawnapi
     spec:
       containers:
-        - image: pingkunga/bojpawnapi:dev-3ab2e98
+        - image: pingkunga/bojpawnapi:1.0.1
           imagePullPolicy: Always
           name: bojpawnapi
           ports:
