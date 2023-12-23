@@ -15,7 +15,7 @@ spec:
       recurse: true
   destination:
     name: in-cluster
-    namespace: group-4-prod
+    namespace: group-4
   syncPolicy:
     automated:
       prune: true

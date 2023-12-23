@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shobteeprajump-email-deployment
+  namespace: group-4
+  creationTimestamp: null
+  labels:
+    app: shobteeprajump-email-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shobteeprajump-email-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: shobteeprajump-email-app
+    spec:
+      containers:
+      - name: shobteeprajump-email-app
+        image: justtod/shobteeprajump-email-server:v0.5.14
+        env:
+          - name: RABBITMQ_SVC
+            value: group4-rabbitmq.group-4:5672
+          - name: APP_URL
+            value: https://tcc-01.th1.proen.cloud/group-4/client
+          - name: PORT
+            value: "8002"
+        ports:
+          - containerPort: 8002
+        resources: {}
+status: {}
