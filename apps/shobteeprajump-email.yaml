@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-group-4-email
+  namespace: argocd
+  labels:
+    group: group-4
+spec:
+  project: default
+  source: 
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config.git
+    targetRevision: group-4
+    path: configs/email
+    directory:
+      recurse: true
+  destination:
+    name: in-cluster
+    namespace: group-4-prod
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
